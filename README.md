@@ -11,6 +11,8 @@
 
 [![DOF Pro-Series Simulator Demo](https://img.youtube.com/vi/_gf0vMBl8-Q/maxresdefault.jpg)](https://www.youtube.com/watch?v=_gf0vMBl8-Q)
 
+<a href="https://wottenad.github.io/DOF-Pro-Series-Simulator/">SEE IT IN ACTION!</a>
+
 The DOF Pro-Series Simulator is a real-time, in-browser visualization tool for the [DirectOutput Framework (DOF)](https://github.com/DirectOutput/DirectOutput) — the open-source LED and toy control system used in virtual pinball cabinets worldwide.
 
 It parses your actual DOF configuration files and renders your LED matrix effects, addressable LED strips, RGB toys, and physical toy indicators in real time — **no hardware required**. Design, preview, and refine your cabinet's entire lighting setup from any browser.
