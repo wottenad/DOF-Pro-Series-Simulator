@@ -3,6 +3,7 @@
 ## v1.11 
 - FIX: Removed strict filename matching for DirectOutputConfig30.ini, DirectOutputConfig.ini and DirectOutputConfig2.ini files
 - Retained extension matching
+- Updated index.html to call app_V1.11.js
   
 ## v1.1 (Initial Release)
 - FIX: Code Sim Loop — permanent (untimed) effects no longer block loop cycle detection
