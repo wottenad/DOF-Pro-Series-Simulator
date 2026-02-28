@@ -3,7 +3,7 @@
 **A browser-based digital twin for virtual pinball cabinet lighting and effects.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-v1.11-blue.svg)](#changelog)
+[![Version](https://img.shields.io/badge/version-v1.1-blue.svg)](#changelog)
 
 ---
 
