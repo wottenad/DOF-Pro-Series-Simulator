@@ -1704,11 +1704,11 @@ const App = {
 
     async loadConfig(file) {
         if(!file) return;
-        // v13.11.14: Strict filename match for DirectOutputConfig30.ini
-        if(file.name.toLowerCase() !== 'directoutputconfig30.ini') {
-            alert(`File Validation Error\n\nExpected: DirectOutputConfig30.ini (any case)\nReceived: ${file.name}\n\nThis input requires a file named DirectOutputConfig30.ini (case-insensitive).`);
-            return;
-        }
+// Extension check: must be a .ini file
+if(!file.name.toLowerCase().endsWith('.ini')) {
+    alert(`File Validation Error\n\nExpected: a .ini file\nReceived: ${file.name}\n\nThis input only accepts INI files.`);
+    return;
+}
         const text = await file.text();
         
         // VALIDATION v13.6: Ensure this is actually a config INI file
@@ -1770,11 +1770,11 @@ const App = {
     // Active Toys / trigger list in loadTable() so users can fire physical devices.
     async loadConfig1(file) {
         if (!file) return;
-        // v13.11.14: Strict filename match for DirectOutputConfig.ini
-        if(file.name.toLowerCase() !== 'directoutputconfig.ini') {
-            alert(`File Validation Error\n\nExpected: DirectOutputConfig.ini (any case)\nReceived: ${file.name}\n\nThis input requires a file named DirectOutputConfig.ini (case-insensitive).`);
-            return;
-        }
+// Extension check: must be a .ini file
+if(!file.name.toLowerCase().endsWith('.ini')) {
+    alert(`File Validation Error\n\nExpected: a .ini file\nReceived: ${file.name}\n\nThis input only accepts INI files.`);
+    return;
+}
         const text = await file.text();
         if (!text.includes('[Config DOF]') && !text.includes('[config dof]')) {
             alert('ERROR: This does not appear to be a DirectOutputConfig INI file.');
@@ -1810,11 +1810,11 @@ const App = {
 
     async loadConfig2(file) {
         if (!file) return;
-        // v13.11.14: Strict filename match for DirectOutputConfig2.ini
-        if(file.name.toLowerCase() !== 'directoutputconfig2.ini') {
-            alert(`File Validation Error\n\nExpected: DirectOutputConfig2.ini (any case)\nReceived: ${file.name}\n\nThis input requires a file named DirectOutputConfig2.ini (case-insensitive).`);
-            return;
-        }
+// Extension check: must be a .ini file
+if(!file.name.toLowerCase().endsWith('.ini')) {
+    alert(`File Validation Error\n\nExpected: a .ini file\nReceived: ${file.name}\n\nThis input only accepts INI files.`);
+    return;
+}
         const text = await file.text();
         if (!text.includes('[Config DOF]') && !text.includes('[config dof]')) {
             alert('ERROR: This does not appear to be a DirectOutputConfig INI file.');
