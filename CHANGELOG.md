@@ -1,5 +1,9 @@
 # DOF Pro-Series Simulator — Version Changelog
 
+## v1.11 
+- FIX: Removed strict filename matching for DirectOutputConfig30.ini, DirectOutputConfig.ini and DirectOutputConfig2.ini files
+- Retained extension matching
+  
 ## v1.1 (Initial Release)
 - FIX: Code Sim Loop — permanent (untimed) effects no longer block loop cycle detection
 - Only timed effects (dur/maxDur/fu/fd) count for "all expired" re-fire check
