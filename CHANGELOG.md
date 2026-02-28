@@ -1,6 +1,6 @@
 # DOF Pro-Series Simulator — Version Changelog
 
-## v1.11 
+## v1.1 
 - FIX: Removed strict filename matching for DirectOutputConfig30.ini, DirectOutputConfig.ini and DirectOutputConfig2.ini files
 - Retained extension matching
 - Updated index.html to call app_V1.11.js
