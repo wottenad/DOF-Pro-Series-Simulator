@@ -2340,7 +2340,7 @@ thead .as-grid-th { position: sticky; }
 }
 .cref-cc-name {
     font-size: 0.45rem;
-    color: var(--text-muted);
+    color: #ddd;
     text-align: center;
     word-break: break-all;
     line-height: 1.1;
@@ -3182,7 +3182,7 @@ thead .as-grid-th { position: sticky; }
 .help-color-chart { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 5px; margin: 10px 0 20px 0; }
 .help-color-chart .cref-cc-item { width: 72px; }
 .help-color-chart .cref-cc-swatch { width: 64px; height: 64px; border-radius: 4px; }
-.help-color-chart .cref-cc-name { font-size: 0.6rem; max-width: 72px; color: var(--text-muted); }
+.help-color-chart .cref-cc-name { font-size: 0.6rem; max-width: 72px; color: #ddd; }
 .help-color-chart .cref-cc-hex { font-size: 0.62rem; color: #bbb; letter-spacing: 0.02em; }
 .cref-cc-item { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .cref-cc-swatch { width: 30px; height: 30px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.1); }
