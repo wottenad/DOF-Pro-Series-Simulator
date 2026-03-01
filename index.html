@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>DOF Pro-Series Simulator V1.1</title>
-    <link rel="stylesheet" href="style_V1.1.css">
+    <title>DOF Pro-Series Simulator V1.1-2-28</title>
+    <link rel="stylesheet" href="style_V1_1.css">
     <style>
     .toy-label.multi-layer { font-style: italic; font-weight: 500; }
     .trigger-head { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 4px; }
@@ -280,7 +280,7 @@
     .help-color-chart .cref-cc-name {
         font-size: 0.6rem;
         max-width: 72px;
-        color: var(--text-muted, #aaa);
+        color: #ddd;
     }
     .help-color-chart .cref-cc-hex {
         font-size: 0.62rem;
@@ -435,7 +435,7 @@
 <body data-theme="blueprint">
 
 <header>
-    <div class="brand">DOF <span>PRO SIMULATOR V1.1</span></div>
+    <div class="brand">DOF <span>PRO SIMULATOR V1.1-2-28</span></div>
     <div class="header-controls">
         <div id="inspector-active-indicator" style="display:none; align-items:center; gap:10px; margin-right:20px;">
             <div class="inspector-badge">INSPECTOR ACTIVE</div>
@@ -1668,7 +1668,7 @@
     </ul>
 
     <h2>Color Accuracy</h2>
-    <p>Each indicator lights up in the exact color resolved from the DOF effect string — including custom colors defined in your <code>[Colors DOF]</code> section, the full 137-color DOF named palette, and inline hex values. If a toy's effect uses <code>Blink</code>, the indicator will pulse accordingly. Fade parameters (FU/FD) affect the color intensity in real time.</p>
+    <p>Each indicator lights up in the exact color resolved from the DOF effect string — including custom colors defined in your <code>[Colors DOF]</code> section, the full 122-color DOF named palette, and inline hex values. If a toy's effect uses <code>Blink</code>, the indicator will pulse accordingly. Fade parameters (FU/FD) affect the color intensity in real time.</p>
 
     <h2>Using the Toy Inspector</h2>
     <p>Click any toy indicator to open the <strong>Toy Inspector</strong> for that toy. See the <a href="#" onclick="HelpNav.show('h-inspectors');return false;">Inspectors</a> section for full details. When the inspector is open, the Active Toys panel suspends normal trigger-driven updates — only the inspected toy's effects are shown.</p>
@@ -2086,7 +2086,7 @@
         <li><strong>Apply Button</strong> — Commits the current effect to the active Target Section.</li>
         <li><strong>Generated DOF String</strong> — Live preview of the code being generated.</li>
         <li><strong>Layer Tabs</strong> — Switch between up to 6 layers (L1–L6).</li>
-        <li><strong>Color Grid</strong> — 137 DOF named colors.</li>
+        <li><strong>Color Grid</strong> — 122 DOF named colors.</li>
         <li><strong>Effect &amp; Timing</strong> — Effect type, fade, duration, intensity controls.</li>
         <li><strong>Area &amp; Motion</strong> — Spatial positioning and scrolling.</li>
         <li><strong>Sparkle</strong> — Per-pixel random twinkle parameters.</li>
@@ -2206,7 +2206,7 @@
 
 <div class="help-section" id="h-bld-color">
     <h1>Color Selection</h1>
-    <p>The Color section displays the complete DOF color palette — <strong>137 named colors</strong> recognized by the DirectOutput Framework. Click any swatch to set the active layer's color.</p>
+    <p>The Color section displays the complete DOF color palette — <strong>122 named colors</strong> recognized by the DirectOutput Framework. Click any swatch to set the active layer's color.</p>
 
     <div class="help-callout"><strong>Important:</strong> DOF uses named colors, not hex values. The color name (e.g., <code>Red</code>, <code>Lawn_green</code>, <code>White_smoke</code>) is what appears in the generated DOF string. The simulator maps these names to their hex equivalents for rendering.</div>
 
@@ -2233,63 +2233,109 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DC143C;"></div><div class="cref-cc-name">Crimson</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF6347;"></div><div class="cref-cc-name">Tomato</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF7F50;"></div><div class="cref-cc-name">Coral</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#CD5C5C;"></div><div class="cref-cc-name">Indian_red</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F08080;"></div><div class="cref-cc-name">Light_coral</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#E9967A;"></div><div class="cref-cc-name">Dark_salmon</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FA8072;"></div><div class="cref-cc-name">Salmon</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFA07A;"></div><div class="cref-cc-name">Light_salmon</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF4500;"></div><div class="cref-cc-name">Orange_red</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF8C00;"></div><div class="cref-cc-name">Dark_orange</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFA500;"></div><div class="cref-cc-name">Orange</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFD700;"></div><div class="cref-cc-name">Gold</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#B8860B;"></div><div class="cref-cc-name">Dark_golden_rod</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DAA520;"></div><div class="cref-cc-name">Golden_rod</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#EEE8AA;"></div><div class="cref-cc-name">Pale_golden_rod</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#BDB76B;"></div><div class="cref-cc-name">Dark_khaki</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0E68C;"></div><div class="cref-cc-name">Khaki</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#9ACD32;"></div><div class="cref-cc-name">Yellow_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#556B2F;"></div><div class="cref-cc-name">Dark_olive_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#6B8E23;"></div><div class="cref-cc-name">Olive_drab</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#7CFC00;"></div><div class="cref-cc-name">Lawn_green</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#7FFF00;"></div><div class="cref-cc-name">Chart_reuse</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#ADFF2F;"></div><div class="cref-cc-name">Green_yellow</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#006400;"></div><div class="cref-cc-name">Dark_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#228B22;"></div><div class="cref-cc-name">Forest_green</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#32CD32;"></div><div class="cref-cc-name">Lime_green</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#90EE90;"></div><div class="cref-cc-name">Light_green</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FA9A;"></div><div class="cref-cc-name">Med_spring_grn</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#98FB98;"></div><div class="cref-cc-name">Pale_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#8FBC8F;"></div><div class="cref-cc-name">Dark_sea_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FA9A;"></div><div class="cref-cc-name">Medium_spring_green</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FF7F;"></div><div class="cref-cc-name">Spring_green</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#2E8B57;"></div><div class="cref-cc-name">Sea_green</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#20B2AA;"></div><div class="cref-cc-name">Light_sea_grn</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#66CDAA;"></div><div class="cref-cc-name">Medium_aqua_marine</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#3CB371;"></div><div class="cref-cc-name">Medium_sea_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#20B2AA;"></div><div class="cref-cc-name">Light_sea_green</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#2F4F4F;"></div><div class="cref-cc-name">Dark_slate_gray</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#008B8B;"></div><div class="cref-cc-name">Dark_cyan</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FFFF;"></div><div class="cref-cc-name">Aqua</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#E0FFFF;"></div><div class="cref-cc-name">Light_cyan</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00CED1;"></div><div class="cref-cc-name">Dark_turquoise</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#40E0D0;"></div><div class="cref-cc-name">Turquoise</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#48D1CC;"></div><div class="cref-cc-name">Medium_turquoise</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#AFEEEE;"></div><div class="cref-cc-name">Pale_turquoise</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#7FFFD4;"></div><div class="cref-cc-name">Aqua_marine</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#B0E0E6;"></div><div class="cref-cc-name">Powder_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#5F9EA0;"></div><div class="cref-cc-name">Cadet_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#4682B4;"></div><div class="cref-cc-name">Steel_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#6495ED;"></div><div class="cref-cc-name">Corn_flower_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00BFFF;"></div><div class="cref-cc-name">Deep_sky_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#1E90FF;"></div><div class="cref-cc-name">Dodger_blue</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#ADD8E6;"></div><div class="cref-cc-name">Light_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#87CEEB;"></div><div class="cref-cc-name">Sky_blue</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#87CEFA;"></div><div class="cref-cc-name">Light_sky_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#191970;"></div><div class="cref-cc-name">Midnight_blue</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00008B;"></div><div class="cref-cc-name">Dark_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#0000CD;"></div><div class="cref-cc-name">Medium_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#4169E1;"></div><div class="cref-cc-name">Royal_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#8A2BE2;"></div><div class="cref-cc-name">Blue_violet</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#4B0082;"></div><div class="cref-cc-name">Indigo</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#483D8B;"></div><div class="cref-cc-name">Dark_slate_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#6A5ACD;"></div><div class="cref-cc-name">Slate_blue</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#7B68EE;"></div><div class="cref-cc-name">Medium_slate_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#9370DB;"></div><div class="cref-cc-name">Medium_purple</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#8B008B;"></div><div class="cref-cc-name">Dark_magenta</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#9400D3;"></div><div class="cref-cc-name">Dark_violet</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DA70D6;"></div><div class="cref-cc-name">Orchid</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#9932CC;"></div><div class="cref-cc-name">Dark_orchid</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#BA55D3;"></div><div class="cref-cc-name">Medium_orchid</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D8BFD8;"></div><div class="cref-cc-name">Thistle</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DDA0DD;"></div><div class="cref-cc-name">Plum</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#EE82EE;"></div><div class="cref-cc-name">Violet</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF00FF;"></div><div class="cref-cc-name">Fuchsia</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#C71585;"></div><div class="cref-cc-name">Med_violet_red</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DA70D6;"></div><div class="cref-cc-name">Orchid</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#C71585;"></div><div class="cref-cc-name">Medium_violet_red</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DB7093;"></div><div class="cref-cc-name">Pale_violet_red</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF1493;"></div><div class="cref-cc-name">Deep_pink</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF69B4;"></div><div class="cref-cc-name">Hot_pink</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFB6C1;"></div><div class="cref-cc-name">Light_pink</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFC0CB;"></div><div class="cref-cc-name">Pink</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAEBD7;"></div><div class="cref-cc-name">Antique_white</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5F5DC;"></div><div class="cref-cc-name">Beige</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5DEB3;"></div><div class="cref-cc-name">Wheat</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4C4;"></div><div class="cref-cc-name">Bisque</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF8DC;"></div><div class="cref-cc-name">Corn_silk</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFACD;"></div><div class="cref-cc-name">Lemon_chiffon</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAFAD2;"></div><div class="cref-cc-name">Light_golden_rod</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFE0;"></div><div class="cref-cc-name">Light_yellow</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#8B4513;"></div><div class="cref-cc-name">Saddle_brown</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#A0522D;"></div><div class="cref-cc-name">Sienna</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D2691E;"></div><div class="cref-cc-name">Chocolate</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#CD853F;"></div><div class="cref-cc-name">Peru</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D2B48C;"></div><div class="cref-cc-name">Tan</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#BC8F8F;"></div><div class="cref-cc-name">Rosy_brown</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F4A460;"></div><div class="cref-cc-name">Sandy_brown</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DEB887;"></div><div class="cref-cc-name">Burly_wood</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D2B48C;"></div><div class="cref-cc-name">Tan</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#BC8F8F;"></div><div class="cref-cc-name">Rosy_brown</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4B5;"></div><div class="cref-cc-name">Moccasin</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFDEAD;"></div><div class="cref-cc-name">Navajo_white</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFDAB9;"></div><div class="cref-cc-name">Peach_puff</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4E1;"></div><div class="cref-cc-name">Misty_rose</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF0F5;"></div><div class="cref-cc-name">Lavender_blush</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFEFD5;"></div><div class="cref-cc-name">Papaya_whip</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#708090;"></div><div class="cref-cc-name">Slate_gray</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#778899;"></div><div class="cref-cc-name">Light_slate_gray</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#B0C4DE;"></div><div class="cref-cc-name">Light_steel_blue</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#E6E6FA;"></div><div class="cref-cc-name">Lavender</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#696969;"></div><div class="cref-cc-name">Dim_gray</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D3D3D3;"></div><div class="cref-cc-name">Light_gray</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5F5F5;"></div><div class="cref-cc-name">White_smoke</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#A9A9A9;"></div><div class="cref-cc-name">Dark_gray</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFBF00;"></div><div class="cref-cc-name">Amber</div></div>
     </div>
-    <p style="font-size:0.72rem; color:var(--text-muted);">Showing a representative subset. The full 137-color palette is available in the Builder's Color section and in the <a href="#" onclick="HelpNav.show('h-techref');return false;">DOF Parameter Reference</a>.</p>
+    <p style="font-size:0.72rem; color:var(--text-muted);">Showing a representative subset. The full 122-color palette is available in the Builder's Color section and in the <a href="#" onclick="HelpNav.show('h-techref');return false;">DOF Parameter Reference</a>.</p>
 </div>
 
 <div class="help-section" id="h-bld-timing">
@@ -2566,7 +2612,7 @@
      ╚═══════════════════════════════════════════════════════════════════╝ -->
 
 <!-- Tech Ref section is very large (color chart etc). Including ID placeholder.
-     The full tech ref with all 137 color swatches, INI structure tables, etc.
+     The full tech ref with all 122 color swatches, INI structure tables, etc.
      will be pulled verbatim from index.html when this is snapped in.
      For this standalone preview, we include a representative summary. -->
 <div class="help-section" id="h-techref">
@@ -2597,7 +2643,7 @@
     <table class="help-tech-table">
         <thead><tr><th style="width:130px">Token</th><th style="width:100px">Default</th><th>Description</th></tr></thead>
         <tbody>
-            <tr><td class="tc">ColorName</td><td class="td">—</td><td>Named color from [Colors DOF] section, or from the 137-color DOF palette. Case-insensitive. Underscore for multi-word names (e.g. <code>Dark_violet</code>).</td></tr>
+            <tr><td class="tc">ColorName</td><td class="td">—</td><td>Named color from [Colors DOF] section, or from the 122-color DOF palette. Case-insensitive. Underscore for multi-word names (e.g. <code>Dark_violet</code>).</td></tr>
             <tr><td class="tc">#RRGGBB</td><td class="td">—</td><td>Direct hex color value. Can appear anywhere in the layer string.</td></tr>
             <tr><td class="tc">@token@</td><td class="td">—</td><td>Variable macro — expanded to its string value before parsing. Table-specific overrides applied first.</td></tr>
             <tr><td class="tc">Max<em>n</em></td><td class="td">255</td><td>Maximum intensity cap (0–255). Limits brightness without changing the base color hue.</td></tr>
@@ -2698,7 +2744,7 @@
     </ul>
     <p>This correctly handles both the 6-column WS2811 tables that dominate most cabinets and the larger multi-output tables (8, 10, 12 columns) used by tables like Diner, Twilight Zone, etc.</p>
     <h2>DOF Named Color Palette</h2>
-    <p>All 137 DOF named colors are listed below. Use the exact name (including underscores) in your effect strings. Each swatch shows the actual rendered color alongside its name and hex value.</p>
+    <p>All 122 DOF named colors are listed below. Use the exact name (including underscores) in your effect strings. Each swatch shows the actual rendered color alongside its name and hex value.</p>
     <div class="help-color-chart">
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#000000;"></div><div class="cref-cc-name" style="color:#888">Black</div><div class="cref-cc-hex">#000000</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFFF;"></div><div class="cref-cc-name">White</div><div class="cref-cc-hex">#FFFFFF</div></div>
@@ -2750,6 +2796,7 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FA9A;"></div><div class="cref-cc-name">Medium_spring_green</div><div class="cref-cc-hex">#00FA9A</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FF7F;"></div><div class="cref-cc-name">Spring_green</div><div class="cref-cc-hex">#00FF7F</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#2E8B57;"></div><div class="cref-cc-name">Sea_green</div><div class="cref-cc-hex">#2E8B57</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#66CDAA;"></div><div class="cref-cc-name">Medium_aqua_marine</div><div class="cref-cc-hex">#66CDAA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#3CB371;"></div><div class="cref-cc-name">Medium_sea_green</div><div class="cref-cc-hex">#3CB371</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#20B2AA;"></div><div class="cref-cc-name">Light_sea_green</div><div class="cref-cc-hex">#20B2AA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#2F4F4F;"></div><div class="cref-cc-name">Dark_slate_gray</div><div class="cref-cc-hex">#2F4F4F</div></div>
@@ -2787,22 +2834,22 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D8BFD8;"></div><div class="cref-cc-name">Thistle</div><div class="cref-cc-hex">#D8BFD8</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DDA0DD;"></div><div class="cref-cc-name">Plum</div><div class="cref-cc-hex">#DDA0DD</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#EE82EE;"></div><div class="cref-cc-name">Violet</div><div class="cref-cc-hex">#EE82EE</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF00FF;"></div><div class="cref-cc-name">Fuchsia</div><div class="cref-cc-hex">#FF00FF</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DA70D6;"></div><div class="cref-cc-name">Orchid</div><div class="cref-cc-hex">#DA70D6</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#C71585;"></div><div class="cref-cc-name">Medium_violet_red</div><div class="cref-cc-hex">#C71585</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DB7093;"></div><div class="cref-cc-name">Pale_violet_red</div><div class="cref-cc-hex">#DB7093</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF1493;"></div><div class="cref-cc-name">Deep_pink</div><div class="cref-cc-hex">#FF1493</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF69B4;"></div><div class="cref-cc-name">Hot_pink</div><div class="cref-cc-hex">#FF69B4</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFB6C1;"></div><div class="cref-cc-name">Light_pink</div><div class="cref-cc-hex">#FFB6C1</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFC0CB;"></div><div class="cref-cc-name">Pink</div><div class="cref-cc-hex">#FFC0CB</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAEBD7;"></div><div class="cref-cc-name">Antique_white</div><div class="cref-cc-hex">#FAEBD7</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5F5DC;"></div><div class="cref-cc-name">Beige</div><div class="cref-cc-hex">#F5F5DC</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4C4;"></div><div class="cref-cc-name">Bisque</div><div class="cref-cc-hex">#FFE4C4</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFEBCD;"></div><div class="cref-cc-name">Blanched_almond</div><div class="cref-cc-hex">#FFEBCD</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5DEB3;"></div><div class="cref-cc-name">Wheat</div><div class="cref-cc-hex">#F5DEB3</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFACD;"></div><div class="cref-cc-name">Lemon_chiffon</div><div class="cref-cc-hex">#FFFACD</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF8DC;"></div><div class="cref-cc-name">Corn_silk</div><div class="cref-cc-hex">#FFF8DC</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFACD;"></div><div class="cref-cc-name">Lemon_chiffon</div><div class="cref-cc-hex">#FFFACD</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAFAD2;"></div><div class="cref-cc-name">Light_golden_rod</div><div class="cref-cc-hex">#FAFAD2</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFE0;"></div><div class="cref-cc-name">Light_yellow</div><div class="cref-cc-hex">#FFFFE0</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#8B4513;"></div><div class="cref-cc-name">Saddle_brown</div><div class="cref-cc-hex">#8B4513</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#A0522D;"></div><div class="cref-cc-name">Sienna</div><div class="cref-cc-hex">#A0522D</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D2691E;"></div><div class="cref-cc-name">Chocolate</div><div class="cref-cc-hex">#D2691E</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#CD853F;"></div><div class="cref-cc-name">Peru</div><div class="cref-cc-hex">#CD853F</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F4A460;"></div><div class="cref-cc-name">Sandy_brown</div><div class="cref-cc-hex">#F4A460</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DEB887;"></div><div class="cref-cc-name">Burly_wood</div><div class="cref-cc-hex">#DEB887</div></div>
@@ -2813,26 +2860,14 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFDAB9;"></div><div class="cref-cc-name">Peach_puff</div><div class="cref-cc-hex">#FFDAB9</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4E1;"></div><div class="cref-cc-name">Misty_rose</div><div class="cref-cc-hex">#FFE4E1</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF0F5;"></div><div class="cref-cc-name">Lavender_blush</div><div class="cref-cc-hex">#FFF0F5</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAF0E6;"></div><div class="cref-cc-name">Linen</div><div class="cref-cc-hex">#FAF0E6</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FDF5E6;"></div><div class="cref-cc-name">Old_lace</div><div class="cref-cc-hex">#FDF5E6</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFEFD5;"></div><div class="cref-cc-name">Papaya_whip</div><div class="cref-cc-hex">#FFEFD5</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF5EE;"></div><div class="cref-cc-name">Sea_shell</div><div class="cref-cc-hex">#FFF5EE</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5FFFA;"></div><div class="cref-cc-name">Mint_cream</div><div class="cref-cc-hex">#F5FFFA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#708090;"></div><div class="cref-cc-name">Slate_gray</div><div class="cref-cc-hex">#708090</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#778899;"></div><div class="cref-cc-name">Light_slate_gray</div><div class="cref-cc-hex">#778899</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#B0C4DE;"></div><div class="cref-cc-name">Light_steel_blue</div><div class="cref-cc-hex">#B0C4DE</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#E6E6FA;"></div><div class="cref-cc-name">Lavender</div><div class="cref-cc-hex">#E6E6FA</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFAF0;"></div><div class="cref-cc-name">Floral_white</div><div class="cref-cc-hex">#FFFAF0</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0F8FF;"></div><div class="cref-cc-name">Alice_blue</div><div class="cref-cc-hex">#F0F8FF</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F8F8FF;"></div><div class="cref-cc-name">Ghost_white</div><div class="cref-cc-hex">#F8F8FF</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0FFF0;"></div><div class="cref-cc-name">Honeydew</div><div class="cref-cc-hex">#F0FFF0</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFF0;"></div><div class="cref-cc-name">Ivory</div><div class="cref-cc-hex">#FFFFF0</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0FFFF;"></div><div class="cref-cc-name">Azure</div><div class="cref-cc-hex">#F0FFFF</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFAFA;"></div><div class="cref-cc-name">Snow</div><div class="cref-cc-hex">#FFFAFA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#696969;"></div><div class="cref-cc-name">Dim_gray</div><div class="cref-cc-hex">#696969</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DCDCDC;"></div><div class="cref-cc-name">Gainsboro</div><div class="cref-cc-hex">#DCDCDC</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D3D3D3;"></div><div class="cref-cc-name">Light_gray</div><div class="cref-cc-hex">#D3D3D3</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5F5F5;"></div><div class="cref-cc-name">White_smoke</div><div class="cref-cc-hex">#F5F5F5</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#A9A9A9;"></div><div class="cref-cc-name">Dark_gray</div><div class="cref-cc-hex">#A9A9A9</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFBF00;"></div><div class="cref-cc-name">Amber</div><div class="cref-cc-hex">#FFBF00</div></div>
     </div>
 
 </div>
@@ -2902,7 +2937,7 @@
         <strong>About This Software</strong><br>
         DOF Pro-Series Simulator was designed, programmed, and tested by <strong>Walt Ottenad</strong> / <a href="https://www.adcmobile.com" target="_blank">ADC Mobile</a>.<br>
         The source code is hosted on GitHub — <em><a href="https://github.com/wottenad/DOF-Pro-Series-Simulator" target="_blank">View on GitHub</a></em><br>
-       	If you have feedback, cool effects to share or improvements to suggest, <a href="mailto:wottenad@gmail.com">contact me.</a> <br><br>
+       	If you have feedback, cool effects to share or improvements to suggest, <a href="/cdn-cgi/l/email-protection#55223a2121303b3431153238343c397b363a38">contact me.</a> <br><br>
         <a href="https://paypal.me/wottenad" target="_blank" class="beer-link">🍺 Buy Me a Beer</a>
     </div>
 
@@ -3075,8 +3110,8 @@
                     <tr><td colspan="3" class="cref-note">&#9432; RGB toys (Config2/LedWiz 2): each column drives one physical diode. If all active channels share the same named color, that color is used directly. Otherwise channels blend by diode position.</td></tr>
                 </tbody>
             </table>
-            <!-- V1.1: Full DOF color palette — 137 named colors from DOF_Reference3.html -->
-            <div class="cref-color-chart-header">DOF Named Color Palette <span style="font-weight:normal;font-size:0.65rem;color:var(--text-muted);">(137 colors — use exact name in effect strings)</span></div>
+            <!-- V1.1: Full DOF color palette — 122 named colors from DOF_Reference3.html -->
+            <div class="cref-color-chart-header">DOF Named Color Palette <span style="font-weight:normal;font-size:0.65rem;color:var(--text-muted);">(122 colors — use exact name in effect strings)</span></div>
             <div class="cref-color-chart">
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#000000;"></div><div class="cref-cc-name" style="color:#888">Black</div><div class="cref-cc-hex">#000000</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFFF;"></div><div class="cref-cc-name">White</div><div class="cref-cc-hex">#FFFFFF</div></div>
@@ -3128,6 +3163,7 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FA9A;"></div><div class="cref-cc-name">Medium_spring_green</div><div class="cref-cc-hex">#00FA9A</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#00FF7F;"></div><div class="cref-cc-name">Spring_green</div><div class="cref-cc-hex">#00FF7F</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#2E8B57;"></div><div class="cref-cc-name">Sea_green</div><div class="cref-cc-hex">#2E8B57</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#66CDAA;"></div><div class="cref-cc-name">Medium_aqua_marine</div><div class="cref-cc-hex">#66CDAA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#3CB371;"></div><div class="cref-cc-name">Medium_sea_green</div><div class="cref-cc-hex">#3CB371</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#20B2AA;"></div><div class="cref-cc-name">Light_sea_green</div><div class="cref-cc-hex">#20B2AA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#2F4F4F;"></div><div class="cref-cc-name">Dark_slate_gray</div><div class="cref-cc-hex">#2F4F4F</div></div>
@@ -3165,22 +3201,22 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D8BFD8;"></div><div class="cref-cc-name">Thistle</div><div class="cref-cc-hex">#D8BFD8</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DDA0DD;"></div><div class="cref-cc-name">Plum</div><div class="cref-cc-hex">#DDA0DD</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#EE82EE;"></div><div class="cref-cc-name">Violet</div><div class="cref-cc-hex">#EE82EE</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF00FF;"></div><div class="cref-cc-name">Fuchsia</div><div class="cref-cc-hex">#FF00FF</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DA70D6;"></div><div class="cref-cc-name">Orchid</div><div class="cref-cc-hex">#DA70D6</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#C71585;"></div><div class="cref-cc-name">Medium_violet_red</div><div class="cref-cc-hex">#C71585</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DB7093;"></div><div class="cref-cc-name">Pale_violet_red</div><div class="cref-cc-hex">#DB7093</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF1493;"></div><div class="cref-cc-name">Deep_pink</div><div class="cref-cc-hex">#FF1493</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FF69B4;"></div><div class="cref-cc-name">Hot_pink</div><div class="cref-cc-hex">#FF69B4</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFB6C1;"></div><div class="cref-cc-name">Light_pink</div><div class="cref-cc-hex">#FFB6C1</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFC0CB;"></div><div class="cref-cc-name">Pink</div><div class="cref-cc-hex">#FFC0CB</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAEBD7;"></div><div class="cref-cc-name">Antique_white</div><div class="cref-cc-hex">#FAEBD7</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5F5DC;"></div><div class="cref-cc-name">Beige</div><div class="cref-cc-hex">#F5F5DC</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4C4;"></div><div class="cref-cc-name">Bisque</div><div class="cref-cc-hex">#FFE4C4</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFEBCD;"></div><div class="cref-cc-name">Blanched_almond</div><div class="cref-cc-hex">#FFEBCD</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5DEB3;"></div><div class="cref-cc-name">Wheat</div><div class="cref-cc-hex">#F5DEB3</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFACD;"></div><div class="cref-cc-name">Lemon_chiffon</div><div class="cref-cc-hex">#FFFACD</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF8DC;"></div><div class="cref-cc-name">Corn_silk</div><div class="cref-cc-hex">#FFF8DC</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFACD;"></div><div class="cref-cc-name">Lemon_chiffon</div><div class="cref-cc-hex">#FFFACD</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAFAD2;"></div><div class="cref-cc-name">Light_golden_rod</div><div class="cref-cc-hex">#FAFAD2</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFE0;"></div><div class="cref-cc-name">Light_yellow</div><div class="cref-cc-hex">#FFFFE0</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#8B4513;"></div><div class="cref-cc-name">Saddle_brown</div><div class="cref-cc-hex">#8B4513</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#A0522D;"></div><div class="cref-cc-name">Sienna</div><div class="cref-cc-hex">#A0522D</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D2691E;"></div><div class="cref-cc-name">Chocolate</div><div class="cref-cc-hex">#D2691E</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#CD853F;"></div><div class="cref-cc-name">Peru</div><div class="cref-cc-hex">#CD853F</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F4A460;"></div><div class="cref-cc-name">Sandy_brown</div><div class="cref-cc-hex">#F4A460</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DEB887;"></div><div class="cref-cc-name">Burly_wood</div><div class="cref-cc-hex">#DEB887</div></div>
@@ -3191,26 +3227,14 @@
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFDAB9;"></div><div class="cref-cc-name">Peach_puff</div><div class="cref-cc-hex">#FFDAB9</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFE4E1;"></div><div class="cref-cc-name">Misty_rose</div><div class="cref-cc-hex">#FFE4E1</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF0F5;"></div><div class="cref-cc-name">Lavender_blush</div><div class="cref-cc-hex">#FFF0F5</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FAF0E6;"></div><div class="cref-cc-name">Linen</div><div class="cref-cc-hex">#FAF0E6</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FDF5E6;"></div><div class="cref-cc-name">Old_lace</div><div class="cref-cc-hex">#FDF5E6</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFEFD5;"></div><div class="cref-cc-name">Papaya_whip</div><div class="cref-cc-hex">#FFEFD5</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFF5EE;"></div><div class="cref-cc-name">Sea_shell</div><div class="cref-cc-hex">#FFF5EE</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5FFFA;"></div><div class="cref-cc-name">Mint_cream</div><div class="cref-cc-hex">#F5FFFA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#708090;"></div><div class="cref-cc-name">Slate_gray</div><div class="cref-cc-hex">#708090</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#778899;"></div><div class="cref-cc-name">Light_slate_gray</div><div class="cref-cc-hex">#778899</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#B0C4DE;"></div><div class="cref-cc-name">Light_steel_blue</div><div class="cref-cc-hex">#B0C4DE</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#E6E6FA;"></div><div class="cref-cc-name">Lavender</div><div class="cref-cc-hex">#E6E6FA</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFAF0;"></div><div class="cref-cc-name">Floral_white</div><div class="cref-cc-hex">#FFFAF0</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0F8FF;"></div><div class="cref-cc-name">Alice_blue</div><div class="cref-cc-hex">#F0F8FF</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F8F8FF;"></div><div class="cref-cc-name">Ghost_white</div><div class="cref-cc-hex">#F8F8FF</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0FFF0;"></div><div class="cref-cc-name">Honeydew</div><div class="cref-cc-hex">#F0FFF0</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFFF0;"></div><div class="cref-cc-name">Ivory</div><div class="cref-cc-hex">#FFFFF0</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F0FFFF;"></div><div class="cref-cc-name">Azure</div><div class="cref-cc-hex">#F0FFFF</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFFAFA;"></div><div class="cref-cc-name">Snow</div><div class="cref-cc-hex">#FFFAFA</div></div>
 <div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#696969;"></div><div class="cref-cc-name">Dim_gray</div><div class="cref-cc-hex">#696969</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#DCDCDC;"></div><div class="cref-cc-name">Gainsboro</div><div class="cref-cc-hex">#DCDCDC</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#D3D3D3;"></div><div class="cref-cc-name">Light_gray</div><div class="cref-cc-hex">#D3D3D3</div></div>
-<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#F5F5F5;"></div><div class="cref-cc-name">White_smoke</div><div class="cref-cc-hex">#F5F5F5</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#A9A9A9;"></div><div class="cref-cc-name">Dark_gray</div><div class="cref-cc-hex">#A9A9A9</div></div>
+<div class="cref-cc-item"><div class="cref-cc-swatch" style="background:#FFBF00;"></div><div class="cref-cc-name">Amber</div><div class="cref-cc-hex">#FFBF00</div></div>
             </div>
         </div>
         <!-- [EDITOR-END: cref-color] -->
@@ -3282,7 +3306,7 @@
                 Each entry is one line. Do not reformat the surrounding JS — only
                 replace the array contents between the two sentinel comments.
              ═══════════════════════════════════════════════════════════════════════ -->
-        <script>
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false">
         // EXAMPLE_LIBRARY_START — DO NOT EDIT THIS LINE
         window.EXAMPLE_LIBRARY = [
           ["ArrowLeft", "S1 Red 500 AL0 AW25 AT0 AH100 SHPArrowLeft L2/S1 Red 500 AL25 AW25 AT0 AH100 SHPArrowLeft L2/S1 Red 500 AL50 AW25 AT0 AH100 SHPArrowLeft L2/S1 Red 500 AL75 AW25 AT0 AH100 SHPArrowLeft L2/"],
@@ -3406,14 +3430,14 @@
 <canvas id="helper-canvas" style="display:none;"></canvas>
 
 <!-- SheetJS for XLSX parsing -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <!-- sql.js for PUPDatabase.db -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
+<script data-cfasync="false" src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js"></script>
 
-<script src="app_V1.1.js"></script>
+<script data-cfasync="false" src="app_V1_1.js"></script>
 
 <!-- ── STATS DROPDOWN — self-contained, no changes to app.js ──────────────── -->
-<script>
+<script data-cfasync="false">
 const HelpStats = {
     open: false,
     toggle() {
@@ -3485,7 +3509,7 @@ document.addEventListener('click', function(e) {
 </script>
 
 <!-- ── HELP NAVIGATION — section switcher ────────────────────────────────── -->
-<script>
+<script data-cfasync="false">
 const SECTION_TO_TAB = {};
 const NAV_CONFIG = {
     home: { sections: [], default: 'h-home-landing' },
@@ -3607,10 +3631,12 @@ const HelpNav = {
             html += '</div>';
         });
         nav.innerHTML = html;
+        // Highlight current section link
+        const link = document.getElementById('hn-' + this.currentSection);
+        if (link) link.classList.add('active');
     }
 };
-
-document.addEventListener('DOMContentLoaded', () => HelpNav.switchTab('home'));
 </script>
+
 </body>
 </html>
