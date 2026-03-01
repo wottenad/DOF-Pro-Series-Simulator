@@ -3,6 +3,7 @@
 ## v1.1 
 - FIX: Removed strict filename matching for DirectOutputConfig30.ini, DirectOutputConfig.ini and DirectOutputConfig2.ini files
 - Retained extension matching
+- Replaced color charts with correct 122 color DOF standard colors
   
 ## v1.1 (Initial Release)
 - FIX: Code Sim Loop — permanent (untimed) effects no longer block loop cycle detection
